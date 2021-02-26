@@ -1,0 +1,95 @@
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 480px)',
+  'md': 'screen and (min-width: 960px)',
+  'lg': 'screen and (min-width: 1048px)',
+  'xl': 'screen and (min-width: 1250px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 479px)',
+  'md': 'screen and (max-width: 959px)',
+  'lg': 'screen and (max-width: 1047px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin container($contentWidth:1200px) {
+  width: $contentWidth;
+  margin: auto;
+  @include mq-down(xl){
+    width: calc(100% - 0px);
+    padding: 0 90px;
+  }
+  @include mq-down(md){
+    width: calc(100% - 48px);
+    padding: 0 24px;
+  }
+  @include mq-down(sm){
+    width: calc(100% - 36px);
+    padding: 0 6px;
+  }
+}
+
+@include mq-down(){
+  .pc_only{
+    display: none;
+  }
+  .sp_only{
+    display: block;
+  }
+}
+
+// 479px以下は改行に定義変更
+@include mq-up(sm){
+  .pc_only{
+    display: block;
+  }
+  .sp_only{
+    display: none;
+  }
+}
+
+
+body{
+  font-size: 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.2em;
+  margin: 0;
+  img,svg{
+    width: 100%;
+    height: auto;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color: $linkColor;
+      transition: 0.5s;
+    }
+  }
+  p {
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  @include mq-down(){
+    font-size: 14px;
+  }
+}
+
+.scroll-table {
+  overflow: auto;
+  white-space: nowrap;
+}

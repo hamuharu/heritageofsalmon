@@ -1,0 +1,28 @@
+.page{
+  &__item{
+    padding: 80px 0;
+    background: #fff;
+    @include mq-down(md) {
+      padding: 40px 0px;
+    }
+  }
+  &__item-bg{
+    padding: 80px 0;
+    background: #eee;
+    @include mq-down(md) {
+      padding: 40px 0px;
+    }
+  }
+  &__wrap{
+    @include container;
+  }
+  &__heading{
+    margin-bottom: 60px;
+    @include mq-down(md) {
+      margin-bottom: 50px;
+    }
+    @include mq-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+}
