@@ -1,0 +1,51 @@
+.swiper-container {
+  height: 800px;
+  position: relative;
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img{
+  animation: zoomUp 10s linear 0s 2 normal both;  
+}
+.slide-img img{
+  display: block;
+}
+
+.swiper-button-next {
+	right: 100px !important;
+}
+
+.swiper-button-prev {
+  left: 100px !important;
+} 
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.mainCopy {
+  position: absolute;
+  z-index: 3;
+  top: 44%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  &__box {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px #000; 
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 30px;
+  }
+}

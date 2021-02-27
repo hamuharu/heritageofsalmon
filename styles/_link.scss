@@ -1,0 +1,34 @@
+.link {
+  font-family: 'Noto sans';
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  &__textLink {
+    display: block;
+    padding: 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid #d3d3d3;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      content: '\f061';
+      font-weight: 900;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  &__title {
+    font-size: 30px;
+    margin: 0 30px;
+  }
+  .gray {
+    display: flex;
+    color: #d3d3d3;
+  }
+}
+

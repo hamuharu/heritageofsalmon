@@ -1,0 +1,38 @@
+.parallax {
+  &__top {
+    background: url(img/top/parallax.jpg);
+    @include parallax;
+  }
+  &__story01 {
+    background: url(img/story/01/parallax.jpg);
+    @include parallax;
+  }
+  &__story02 {
+    background: url(img/story/02/parallax.jpg);
+    @include parallax;
+  }
+  &__story03 {
+    background: url(img/story/03/parallax.jpg);
+    @include parallax;
+  }
+  &__story04 {
+    background: url(img/story/04/parallax.jpg);
+    @include parallax;
+  }
+  &__story05 {
+    background: url(img/story/05/parallax.jpg);
+    @include parallax;
+  }
+  &__about {
+    background: url(img/about/parallax.jpg);
+    @include parallax;
+  }
+  &__byoubu {
+    background: url(img/mirushiru/parallax.jpg);
+    @include parallax;
+  }
+  &__mirushiru {
+    background: url(img/mirushiru/parallax.jpg);
+    @include parallax;
+  }
+}

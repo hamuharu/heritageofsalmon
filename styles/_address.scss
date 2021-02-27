@@ -1,0 +1,58 @@
+.address {
+  background: #eee;
+  &__wrap {
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  &__sub-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  &__map {
+    display: flex;
+    align-items: center;
+    p {
+      margin-right: 20px;
+    }
+    a {
+      padding: 10px 20px;
+      background: #fff;
+      border: 1px solid rgb(165, 165, 165);
+      border-radius: 30px;
+    }
+  }
+  &__url {
+    word-break: break-all;
+  }
+  &__box {
+    margin: 20px 0;
+    padding: 30px;
+    border: 2px solid #fff;
+    li {
+      line-height: 1.6rem;
+    }
+  }
+  &__button {
+    text-align: center;
+    .button {
+      border: 1px solid $accentColor;
+      padding: 10px 30px;
+      border-radius: 20px;
+      color: $accentColor;
+      margin-bottom: 30px;
+      background: #fff;
+      a {
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          content: '\f35d';
+          font-weight: 900;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

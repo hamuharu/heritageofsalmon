@@ -26,7 +26,24 @@ $breakpoint-down: (
   }
 }
 
-@mixin container($contentWidth:1200px) {
+@mixin container($contentWidth:1100px) {
+  width: $contentWidth;
+  margin: auto;
+  @include mq-down(xl){
+    width: calc(100% - 0px);
+    padding: 0 90px;
+  }
+  @include mq-down(md){
+    width: calc(100% - 48px);
+    padding: 0 24px;
+  }
+  @include mq-down(sm){
+    width: calc(100% - 36px);
+    padding: 0 6px;
+  }
+}
+
+@mixin container-anker($contentWidth:1200px) {
   width: $contentWidth;
   margin: auto;
   @include mq-down(xl){
@@ -65,7 +82,7 @@ $breakpoint-down: (
 
 body{
   font-size: 16px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   letter-spacing: 0.2em;
   margin: 0;
   img,svg{
@@ -89,7 +106,9 @@ body{
   }
 }
 
-.scroll-table {
-  overflow: auto;
-  white-space: nowrap;
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
+

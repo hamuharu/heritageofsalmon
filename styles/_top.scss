@@ -1,0 +1,105 @@
+@mixin storyBg {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  background-size: cover;
+}
+
+@mixin parallax {
+  min-height: 700px;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top {
+  &__story01 {
+    background: url(img/story/01/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story02 {
+    background: url(img/story/02/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story03 {
+    background: url(img/story/03/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story04 {
+    background: url(img/story/04/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story05 {
+    background: url(img/story/05/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__about {
+    background: url(img/about/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__spot {
+    background: url(img/spot/2-1ポー川史跡自然公園.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__byoubu {
+    background: url(img/mirushiru/03_byoubu.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__salmon {
+    background: url(img/mirushiru/01_salmon01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__activity {
+    background: url(img/mirushiru/02_shibetsuiseki01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__kouseibunkazai {
+    background: url(img/kouseibunka/01.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story06 {
+    background: url(img/story/04/04.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__story07 {
+    background: url(img/story/05/05.jpg);
+    @include storyBg;
+    @include parallax;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    p {
+      background: #fff;
+      display: table;
+      padding: 10px 30px 10px 100px;
+      font-size: 24px;
+    }
+    .main-title {
+      font-size: 36px;
+      font-weight: 600;
+      font-style: italic;
+    }
+    .sub-title {
+      font-weight: 600;
+    }
+    .mini-title {
+      font-size: 20px;
+    }
+  }
+}

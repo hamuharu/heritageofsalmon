@@ -1,0 +1,54 @@
+.column {
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__box {
+    width: 43%;
+    text-align: center;
+    background: #fff;
+  }
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__heading {
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+    h3 {
+      margin-bottom: 20px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: $accentColor;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__textBlock {
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .button {
+    border: 1px solid $accentColor;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: $accentColor;
+    margin-bottom: 30px;
+    a {
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f35d';
+        font-weight: 900;
+        margin-left: 10px;
+      }
+    }
+  }
+}

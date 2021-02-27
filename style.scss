@@ -3,152 +3,91 @@ $fontColor:#1d1d1d;
 $linkColor: #eee;
 $accentColor: #d20a1d;
 
-@import 'styles/general.scss';
-@import 'styles/page.scss';
+@import 'styles/general';
+@import 'styles/page';
+@import 'styles/header';
+@import 'styles/main-visual';
+@import 'styles/main';
+@import 'styles/content';
+@import 'styles/column';
+@import 'styles/footer';
+@import 'styles/youtube';
+@import 'styles/top';
+@import 'styles/anker';
+@import 'styles/link';
+@import 'styles/address';
+@import 'styles/parallax';
+@import 'styles/fadein';
 
-.header {
-  @include container;
-  $headerMargin: 30px;
-  font-size: 14px;
-  &__gnav {
+
+
+.storylink {
+  display: flex;
+}
+
+.story {
+  &__item {
     display: flex;
     align-items: center;
-    color: #fff;
-    justify-content: flex-end;
-  }
-  &__ul {
-    list-style: none;
-    display: flex;
-    li {
-      margin-right: $headerMargin;
+    margin-bottom: 3em;
+    &-title {
+      font-size: 2.4rem;
+      margin-right: 1.25em;
     }
-  }
-  &__line {
-    background: #fff;
-    width: 1px;
-    height: 20px;
-    margin-right: $headerMargin;
-  }
-  &__lang {
-    display: flex;
-    align-items: center;
-  }
-  &__switch {
-    margin-right: $headerMargin;
-  }
-  &__jp {
-    background: #fff;
-    padding: 0 10px;
-    color: rgb(0, 0, 0);
-    border-radius: 15px;
-    margin-right: $headerMargin;
-  }
-  &__en {
-    padding: 0 10px;
-    color: rgb(0, 0, 0);
-    border: 1px solid #fff;
-    border-radius: 15px;
-    color: #fff;
-  }
-}
-
-.main {
-  background: url(img/top/top_slide01.jpg);
-  width: 100%;
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.content {
-  &__heading {
-    text-align: center;
-    position: relative;
-    padding-bottom: 50px;
-    h1 {
-      margin-bottom: 20px;
+    &-copy {
+      font-size: 1.7rem;
     }
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 30px;
-      height: 2px;
-      background: $accentColor;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
-  &__main-text {
-    text-align: center;
-  }
-}
-
-.column {
-  &__wrap {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  &__box {
-    width: 43%;
-    text-align: center;
-    background: #fff;
-  }
-  &__img {
-    margin-bottom: 30px;
-  }
-  &__heading {
-    text-align: center;
-    position: relative;
-    padding-bottom: 30px;
-    h3 {
-      margin-bottom: 20px;
-    }
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 30px;
-      height: 2px;
-      background: $accentColor;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  }
-  &__textBlock {
-    p {
-      margin-bottom: 20px;
-    }
-  }
-  .button {
-    border: 1px solid $accentColor;
-    padding: 10px 30px;
-    border-radius: 20px;
-    color: $accentColor;
-    margin-bottom: 30px;
-    a {
-      &:after {
+    &-link {
+      margin-left: auto;
+      font-size: 1.3rem;
+      & a:after {
         font-family: "Font Awesome 5 Free";
-        content: '\f35d';
+        content: "\f061";
         font-weight: 900;
-        margin-left: 10px;
       }
     }
   }
 }
 
-.footer {
-  padding: 50px 0;
-  text-align: center;
-  img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 50px;
+.placeinfo {
+  line-height: 1.75;
+  &__list {
+    & td {
+      vertical-align: middle;
+      text-align: center;
+      &:nth-child(4) {
+        padding: 1.57em;
+        box-sizing: border-box;
+        text-align: left;
+      }
+    }
   }
-  &__text {
-    margin-bottom: 30px;
+  &__item {
+    background-color: $accentColor;
+    color: #FFFFFF;
+    width: calc(100% / 5);
+    text-align: center;
+    & td:nth-child(2) {
+      width: 20%;
+    }
+    & td:nth-child(3) {
+      width: 15%;
+    }
+    & td:nth-child(4) {
+      width: 40%;
+    }
   }
+  &__list {
+    & img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+  &:nth-child(2n + 1) {
+    background-color: #EEEEEE;
+  }
+}
+
+.justify-center {
+  justify-content: center;
 }
