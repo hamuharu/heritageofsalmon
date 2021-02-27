@@ -20,3 +20,32 @@
     }
   }
 }
+
+.anker-other {
+  color: $accentColor;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__button {
+    margin: 10px;
+    border: 1px solid $accentColor;
+    border-radius: 50px;
+    width: 31%;
+    display: table;
+    min-height: 80px;
+    position: relative;
+    & > div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: 900;
+        position: absolute;
+        top: 40%;
+        right: 15px;
+      }
+    }
+  }
+}
